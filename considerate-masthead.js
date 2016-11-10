@@ -26,7 +26,7 @@
         // Apply the correct padding to the page to prevent stuff disappearing under the masthead
         $('html').css('padding-top', masthead.clientHeight)
         // Add the stylesheet to the <head>
-        $('head').append("<style>[id='" + masthead.id + "'] {position: fixed; top: 0; right: 0; left: 0; transition: transform ease-in 200ms;}[id='" + masthead.id + "'].slide-away{transform: translate3d(0, -100%, 0); -webkit-transform: translate3d(0, -100%, 0);}</style>")
+        $('head').append("<style>[id='" + masthead.id + "'] {position: fixed; top: 0; right: 0; left: 0; z-index: 50000; transition: transform ease-in 200ms;}[id='" + masthead.id + "'].slide-away{transform: translate3d(0, -100%, 0); -webkit-transform: translate3d(0, -100%, 0);}</style>")
 
         var currentScroll = 0;
         jQuery(window).scroll(function(event) {
